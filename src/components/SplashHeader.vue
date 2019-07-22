@@ -46,6 +46,6 @@ h1 {
   color: $brightBlue;
 }
 img {
-  width: 100%;
+  width: 200%;
 }
 </style>
