@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<style>
+    ul {transition: min-height .3s ease-in-out; width: 100%;}
+    .collapsed {height:0vh; min-height: 0; overflow:hidden}
+    .expand {min-height: 100vh;}
+</style>
+<script>
+    function getUserData() {
+        return  {
+            name: 'Matt Carey',
+            title: 'Front End Developer'
+        }
+    }
+
+    function form(){
+        return {
+            input_value: '',
+            isInputValid(){
+                return this.input_value.includes('cat')
+            }
+        }
+    }
+</script>
+<body>
+    <div x-data="{expand : false}">
+        <button @click="expand = true">Open Dropdown</button>
+        
+        
+        <ul
+            x-show="expand"
+            @click.away="expand = false"
+
+            x-transition:enter="collapsed"
+            x-transition:enter-end="expand"
+            x-transition:leave="expand"
+            x-transition:leave-end="collapsed"
+
+        >
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+            Dropdown Body test
+        </ul>
+
+    </div>
+
+    <div x-data="getUserData()">
+        <p x-text="name"></p>
+        <p x-text="title"></p>
+    </div>
+
+    <div x-data="form()">
+        <input x-model="input_value" type="text">
+        <p x-text="isInputValid()"></p>
+    </div>
+
+</body>
+</html>
