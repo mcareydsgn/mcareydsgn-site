@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Nunito Sans";
+    src: url('/NunitoSans.ttf') format('truetype');
+    font-weight: 200 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ostrich Sans Inline';
+    src: url('/ostrich-sans-inline-regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ostrich Sans';
+    src: url('/ostrich-sans-regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --teal: #6adcda;
+    --magenta: #eb6974;
+    font-family: "Nunito Sans";
+    font-variation-settings: "opsz" 6, "wdth" 75;
+    overflow-x:hidden;
+    color: rgb(79, 81, 85)
+}
+
+
+div, section, main, body, aside {
+    position: relative;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding:1rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@media (min-width:500px) {
+    body {
+        padding: 3rem;
+    }
+}
+
+
+
+main {
+    max-width: 1500px;
+    margin-left:auto;
+    margin-right:auto
+}
+
+p, span {
+    font-size: inherit;
+
+}
+
+.mt-0 {margin-top: 0;}
+.mr-0 {margin-right: 0;}
+.mb-0 {margin-bottom: 0;}
+.ml-0 {margin-left: 0;}
