@@ -90,15 +90,6 @@ main {
     padding-bottom: var(--dynamic-padding);
 }
 
-.section-style-1 {
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 var(--dynamic-padding);
-}
-
-
-
 footer {
     background-color: #e2ded5;
     color: #8b8367;
@@ -112,9 +103,13 @@ footer p {
 }
 
 
-
 p, span {
     font-size: inherit;
+}
+
+img, video {
+    width:100%;
+    height: auto;
 }
 
 .mt-0 {margin-top: 0;}
@@ -152,8 +147,24 @@ p, span {
 
 .align-self-end {align-self: end;}
 .justify-self-end {justify-self: end;}
-.no-list-style {
+.list-style-none {
     list-style: none;
     padding-left: 0;
     margin: 0;
+}
+
+.break-before-column {
+    break-before: column;
+}
+
+.container-max-width {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--dynamic-padding);
+}
+
+.section-style-1 {
+    background-color: var(--tan);
+    min-height: 50vh;
 }
