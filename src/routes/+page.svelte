@@ -1,6 +1,39 @@
 <script>
 	import Icons from "../lib/components/icons.svelte";
 	import MultiColumn from "../lib/components/multi-column.svelte";
+	import VideoPlayer from "../lib/components/video-player.svelte";
+	import Slider from "../lib/components/slider.svelte";
+
+	let videos = [
+		{
+			content_type: "video",
+			src: "/videos/bubblechart.mp4",
+			alt: "",
+			title: "",
+			aspect_ratio: "500/193",
+		},
+		{
+			content_type: "video",
+			src: "/videos/treemapchart.mp4",
+			alt: "",
+			title: "",
+			aspect_ratio: "704/325",
+		},
+		{
+			content_type: "video",
+			src: "/videos/gnattchart.mp4",
+			alt: "",
+			title: "",
+			aspect_ratio: "168/97",
+		},
+		{
+			content_type: "video",
+			src: "/videos/drilldowntable.mp4",
+			alt: "",
+			title: "",
+			aspect_ratio: "692/521",
+		},
+	];
 </script>
 
 <svelte:head>
@@ -19,7 +52,7 @@
 		<img src="/ampersand.svg" alt="" class="ampersand" />
 		<span class="developer">
 			<span>Front- End</span><br />
-			Web<br /> Developer</span
+			Software<br /> Developer</span
 		>
 	</h2>
 	<div id="rectSolid" />
@@ -95,15 +128,12 @@
 			<li>Vue Styleguidist,</li>
 			<li>Apache ECharts,</li>
 			<li>GTM,</li>
-			<li>GA4,</li>
-			<li>AWS Amplify,</li>
-			<li>AWS Lambda,</li>
-			<li>AWS API Gateway</li>
+			<li>GA4</li>
 		</ul>
 	</div>
 </section>
 <section class="section-style-1 px-dynamic">
-	<MultiColumn tag="div" classList="container-max-width" columnCount="2">
+	<MultiColumn tag="div" class_list="container-max-width" column_count="2">
 		<h3>Telling a Story With Reports</h3>
 		<p>
 			Marketing campaigns with Google and Facebook come with a large
@@ -157,10 +187,7 @@
 			transitions would allow it smoothly animate between the two values
 			and reduce the otherwise instant content jump.
 		</p>
-		<video controls style="aspect-ratio:3/2;">
-			<source src="/videos/tabs.mp4" type="video/mp4" />
-			<track kind="captions" />
-		</video>
+		<VideoPlayer src="/videos/tabs.mp4" style="aspect-ratio:3/2;" />
 	</MultiColumn>
 	<div class="container-max-width">
 		<h4>Engaging Charts</h4>
@@ -192,7 +219,8 @@
 			breadcrumb navigation that would swap between tables when a user
 			clicked on a table row.
 		</p>
-		<div class="grid grid-column-auto">
+		<Slider slides={videos} />
+		<!-- <div class="grid grid-column-auto">
 			<video controls style="aspect-ratio:3/2;">
 				<source src="/videos/bubblechart.mp4" type="video/mp4" />
 				<track kind="captions" />
@@ -209,7 +237,7 @@
 				<source src="/videos/drilldowntable.mp4" type="video/mp4" />
 				<track kind="captions" />
 			</video>
-		</div>
+		</div> -->
 		<small
 			>Back-end Collaborators: Avery Gonzales, Andrew Towe, Preston
 			McCumber
@@ -418,14 +446,15 @@
 	.sub-title .ampersand {
 		grid-column: 2 / span 3;
 		grid-row: 1 / span 2;
-		width: 55%;
+		width: 51%;
 		justify-self: center;
-		margin: 6vw 14vw 6vw 0;
+		margin: 6vw 0;
+		padding: 1rem;
 	}
 
 	@media (min-width: 1500px) {
 		.sub-title .ampersand {
-			margin: 90px 210px 90px 0;
+			margin: 90px 0;
 		}
 	}
 
@@ -496,7 +525,6 @@
 
 	.tech-container {
 		grid-column: 1 /-1;
-		margin-bottom: var(--dynamic-padding);
 	}
 
 	@media (min-width: 900px) {

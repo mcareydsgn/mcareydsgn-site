@@ -1,13 +1,13 @@
 <script lang="ts">
 	export let tag: string = "div";
-	export let classList: string = "";
-	export let columnCount: string = "2";
+	export let class_list: string = "";
+	export let column_count: string = "2";
 </script>
 
 <svelte:element
 	this={tag}
-	class="multi-column {classList}"
-	style:column-count={columnCount}
+	class="multi-column {class_list}"
+	style:column-count={column_count}
 >
 	<slot />
 </svelte:element>

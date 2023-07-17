@@ -117,11 +117,12 @@ img, video {
 .mb-0 {margin-bottom: 0;}
 .ml-0 {margin-left: 0;}
 
-.pt-dynamic {padding-top: var(--dynamic-padding);}
-.pr-dynamic {padding-right: var(--dynamic-padding);}
-.pb-dynamic {padding-bottom: var(--dynamic-padding);}
-.pl-dynamic {padding-left: var(--dynamic-padding);}
-.px-dynamic {padding-top: var(--dynamic-padding); padding-bottom: var(--dynamic-padding);}
+.pt-dynamic {padding-top: var(--dynamic-padding)!important;}
+.pr-dynamic {padding-right: var(--dynamic-padding)!important;}
+.pb-dynamic {padding-bottom: var(--dynamic-padding)!important;}
+.pl-dynamic {padding-left: var(--dynamic-padding)!important;}
+.px-dynamic {padding-top: var(--dynamic-padding) !important; padding-bottom: var(--dynamic-padding) !important;}
+.py-dynamic {padding-left: var(--dynamic-padding) !important; padding-right: var(--dynamic-padding) !important;}
 
 .grid {
     display: grid;
