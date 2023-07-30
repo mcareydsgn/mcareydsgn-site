@@ -220,24 +220,6 @@
 			clicked on a table row.
 		</p>
 		<Slider slides={videos} />
-		<!-- <div class="grid grid-column-auto">
-			<video controls style="aspect-ratio:3/2;">
-				<source src="/videos/bubblechart.mp4" type="video/mp4" />
-				<track kind="captions" />
-			</video>
-			<video controls style="aspect-ratio:3/2;">
-				<source src="/videos/treemapchart.mp4" type="video/mp4" />
-				<track kind="captions" />
-			</video>
-			<video controls style="aspect-ratio:3/2;">
-				<source src="/videos/gnattchart.mp4" type="video/mp4" />
-				<track kind="captions" />
-			</video>
-			<video controls style="aspect-ratio:3/2;">
-				<source src="/videos/drilldowntable.mp4" type="video/mp4" />
-				<track kind="captions" />
-			</video>
-		</div> -->
 		<small
 			>Back-end Collaborators: Avery Gonzales, Andrew Towe, Preston
 			McCumber
@@ -289,11 +271,6 @@
 		started to adapt the process.
 	</p>
 	<img src="https://placehold.co/600x400" alt="Animated SVG" />
-</section>
-<section class="section-style-1 px-dynamic">
-	<div class="container-max-width">
-		<h3>User Interface Design to Enhance Productivity</h3>
-	</div>
 </section>
 <section class="container-max-width">
 	<h3>
