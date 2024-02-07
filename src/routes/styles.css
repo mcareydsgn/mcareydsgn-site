@@ -71,7 +71,7 @@
     }
 }
 
-div, section, main, body, aside {
+div, section, main, body, aside, header {
     position: relative;
     box-sizing: border-box;
 }

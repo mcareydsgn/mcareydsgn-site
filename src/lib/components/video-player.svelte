@@ -4,6 +4,7 @@
 
 	export let src: string = "";
 	export let container_class_list: string = "";
+	export let style: string = "";
 
 	let video_element: HTMLVideoElement;
 	let seekbar_element: HTMLInputElement;
@@ -39,6 +40,7 @@
 
 	onMount(() => {
 		seekbar_element.max = video_element.duration.toString();
+		console.log(video_element.duration);
 
 		video_element.addEventListener("timeupdate", () => {
 			seekbar_element.value = video_element.currentTime.toString();
@@ -55,9 +57,14 @@
 	});
 </script>
 
-<div class={container_class_list}>
+<div class={container_class_list} {style}>
 	<!-- svelte-ignore a11y-media-has-caption -->
-	<video bind:this={video_element}>
+	<video
+		on:click={playVideoToggle}
+		bind:this={video_element}
+		preload="metadata"
+		class={is_video_playing ? "playing" : ""}
+	>
 		<source {src} type="video/mp4" />
 
 		<!-- <track kind="captions" /> -->
@@ -79,7 +86,6 @@
 				id="seeker"
 				name="seeker"
 				min="0"
-				max="100"
 				step="0.1"
 				value="0"
 			/>
@@ -111,6 +117,14 @@
 </div>
 
 <style>
+	/* video {
+		cursor: url("/icons/play-cursor-circle.svg") 0 0, pointer;
+	}
+
+	video.playing {
+		cursor: url("/icons/pause-cursor-circle.svg") 0 0, pointer;
+	} */
+
 	menu {
 		display: flex;
 		flex-wrap: nowrap;
@@ -137,5 +151,6 @@
 		border: none;
 		color: white;
 		padding: 0;
+		cursor: pointer;
 	}
 </style>
