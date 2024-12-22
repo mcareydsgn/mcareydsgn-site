@@ -1,0 +1,37 @@
+nav {
+	--dynamic-spacing: 1rem;
+	--two-color-box-shadow: calc(var(--dynamic-spacing) / 2.5) calc(var(--dynamic-spacing) / 2.5) 0rem 0rem #bd49788c, calc(var(--dynamic-spacing) / 2.5 * -1) calc(var(--dynamic-spacing) / 2.5 * -1) 0rem 0rem #c6efec8c;
+	position: sticky;
+	z-index: 10;
+	top: calc(var(--dynamic-spacing));
+	/* bottom: calc(var(--dynamic-spacing)); */
+	width: fit-content;
+	margin-inline: auto;
+	background-color: var(--warm-white);
+	border-radius: var(--dynamic-spacing);
+	box-shadow: var(--two-color-box-shadow);
+
+	& ul {
+		list-style: none;
+		display: flex;
+		gap: 1rem;
+		justify-content: end;
+		padding: 1rem;
+		margin: 0;
+	}
+
+	a {
+		position: relative;
+		top: -.25rem;
+		text-underline-offset: .5rem;
+
+		&:visited {
+			color: var(--dark-purple);
+		}
+
+		&:visited:hover {
+			color: var(--magenta);
+		}
+
+	}
+}

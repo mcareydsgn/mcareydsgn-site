@@ -1,0 +1,14 @@
+---
+const { class: className } = Astro.props;
+---
+
+<nav class:list={[className]}>
+	<ul>
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="/chinwag-blog/latest-articles"> A Bit Of A Chinwag </a>
+		</li>
+	</ul>
+</nav>

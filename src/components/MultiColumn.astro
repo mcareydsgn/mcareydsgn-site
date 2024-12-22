@@ -1,0 +1,11 @@
+---
+const { tagname = "section", classList = "", columnCount = 0 } = Astro.props;
+const Element = tagname;
+---
+
+<Element
+	class:list={["multi-column", ...classList.split(" ")]}
+	style={`column-count: ${columnCount}`}
+>
+	<slot />
+</Element>

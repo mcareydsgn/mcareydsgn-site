@@ -1,0 +1,51 @@
+ar-slider {
+	&:not(.init) {
+		display: grid;
+		grid-gap: var(--dynamic-spacing);
+		grid-auto-flow: dense;
+		grid-template-columns: repeat(var(--grid-fit), minmax(350px, 1fr));
+	}
+
+	&.init {
+		display: block;
+		position: relative;
+
+		& > .stage {
+			display: flex;
+			flex-wrap: nowrap;
+			overflow: hidden;
+
+			z-index: 1;
+
+			& ar-panel {
+				width: 100%;
+				flex-shrink: 0;
+				align-self: start;
+
+				&:focus {
+					outline: auto;
+				}
+			}
+		}
+
+		& > menu {
+			display: flex;
+			position: absolute;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			bottom: 0;
+			left: 0;
+			list-style: none;
+			padding-left: 0;
+			z-index: 2;
+			gap: calc(var(--dynamic-spacing) / 3);
+
+			& button {
+				height: 20px;
+			}
+		}
+
+	}
+}

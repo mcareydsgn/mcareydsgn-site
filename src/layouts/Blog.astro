@@ -1,0 +1,106 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Splash from "../components/Splash.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/nav.astro";
+import Icons from "../components/Icons.astro";
+import { getImage } from "astro:assets";
+
+import headshot from "../assets/images/headshot.png";
+
+const HeadshotLg = await getImage({
+	src: headshot,
+	width: 824,
+	format: "webp",
+});
+const HeadshotMd = await getImage({
+	src: headshot,
+	width: 650,
+	format: "webp",
+});
+const HeadshotSM = await getImage({
+	src: headshot,
+	width: 375,
+	format: "webp",
+});
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<style>
+			@font-face {
+				font-family: "Nunito Sans";
+				src: url("/fonts/NunitoSans_Black.ttf") format("truetype");
+				font-weight: 900;
+				font-display: "swap";
+			}
+
+			@font-face {
+				font-family: "Nunito Sans";
+				src: url("/fonts/NunitoSans_Regular.ttf") format("truetype");
+				font-weight: 400;
+				font-display: "swap";
+			}
+
+			@font-face {
+				font-family: "Ostrich Sans";
+				src: url("/fonts/ostrich-sans-regular.woff2");
+				font-weight: normal;
+				font-style: normal;
+				font-display: "swap";
+			}
+		</style>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="grid-page">
+		<Splash>
+			<picture class="headshot">
+				<source
+					type="image/webp"
+					srcset={HeadshotSM.src}
+					media="(max-width: 425px)"
+					height="533"
+					width="375"
+				/>
+				<source
+					type="image/webp"
+					srcset={HeadshotMd.src}
+					media="(max-width: 1200px)"
+					height="924"
+					width="650"
+				/>
+				<img src={HeadshotLg.src} alt="" height="1174" width="824" />
+			</picture>
+
+			<h1 class="blog-name">
+				<span>
+					<span class="mobile-white-inline">A Bit Of A</span>
+					<span class="mobile-white-inline">Chinwag</span>
+				</span>
+			</h1>
+			<h2 class="blog-title">
+				<Icons name="article-outline" iconLibraryName="heroicons" />
+				<span>
+					<slot name="title" />
+				</span>
+			</h2>
+
+			<div id="rectSolid"></div>
+		</Splash>
+		<Nav class:list={[" full"]} />
+		<main class="full grid-page">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

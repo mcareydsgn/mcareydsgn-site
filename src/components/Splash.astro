@@ -1,0 +1,9 @@
+<header class="splash">
+	<slot />
+</header>
+
+<style is:global>
+	@import "./../styles/layer-order.css";
+	@import "./../styles/variables.css";
+	@import "./../styles/critical.css" layer(main);
+</style>

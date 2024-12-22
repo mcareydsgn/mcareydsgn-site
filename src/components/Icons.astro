@@ -1,0 +1,45 @@
+---
+const { name, iconLibraryName = "brands", showIconName = false } = Astro.props;
+
+const { default: innerHTML } = await import(
+	`../assets/icons/${iconLibraryName}/${name}.svg?raw`
+);
+
+function formatName(name) {
+	const allUppercase = ["html", "css", "svg"];
+
+	if (allUppercase.includes(name)) {
+		return name.toUpperCase();
+	} else if (name === "vs-code") {
+		return "VS Code";
+	}
+
+	return name.replace("-", " ");
+}
+
+const formattedName = formatName(name);
+---
+
+<div class="icon-container">
+	<Fragment set:html={innerHTML} />
+	{showIconName && <p>{formattedName}</p>}
+</div>
+<style is:global>
+	.icon-container {
+		display: inline-flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		text-transform: capitalize;
+	}
+
+	.icon-container svg {
+		height: auto;
+	}
+	.icon-container svg.brands {
+		width: 40px;
+	}
+	.icon-container svg.hero-icons {
+		width: 30px;
+	}
+</style>

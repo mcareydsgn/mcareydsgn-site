@@ -1,0 +1,31 @@
+.card {
+	background: var(--warm-white);
+	border-radius: 2rem;
+	box-shadow: var(--two-color-box-shadow);
+	padding: 1.5rem;
+
+	&.dual {
+		box-shadow: var(--two-color-box-shadow);
+	}
+
+	&.blue {
+		box-shadow: var(--blue-color-box-shadow);
+		border: 2px solid var(--teal-alpha);
+	}
+
+	&.tan {
+		box-shadow: var(--tan-color-box-shadow);
+	}
+
+	&.magenta {
+		box-shadow: var(--magenta-color-box-shadow);
+		border: 2px solid var(--magenta-alpha);
+	}
+}
+
+.multi-column {
+	container-name: multiColumn;
+	container-type: inline-size;
+	column-width: 400px;
+	column-gap: var(--dynamic-spacing);
+}

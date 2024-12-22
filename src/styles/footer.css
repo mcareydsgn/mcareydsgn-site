@@ -1,0 +1,11 @@
+footer {
+	background-color: var(--tan);
+	color: #635729;
+	padding: 1rem;
+	text-align: center;
+}
+
+footer p {
+	max-width: 75vw;
+	margin: 0 auto;
+}

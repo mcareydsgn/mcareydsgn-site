@@ -1,0 +1,74 @@
+:root {
+	--teal: #1ed2c9;
+	--dark-teal: #148f87;
+	--light-teal: #c6efec;
+	--magenta: #eb699e;
+	--dark-magenta: #962d57;
+	--dark-purple: #6d0693;
+	--warm-white: #fffbf2;
+	--warm-white-alpha: #fffbf2d6;
+	--magenta-alpha: #bd4978c9;
+	--teal-alpha: #c6efecc9;
+	--tan-alpha: #fbf2ddc9;
+	--tan: #f9f1df;
+	--grey: #475a5d;
+	--grid-auto-min: 250px;
+	--grid-auto-span: 1 / -1;
+	--dynamic-spacing: 1rem;
+	--magenta-color-box-shadow: calc(var(--dynamic-spacing) / 2.5) calc(var(--dynamic-spacing) / 2.5) 0rem 0rem var(--magenta-alpha);
+	--blue-color-box-shadow: calc(var(--dynamic-spacing) / 2.5) calc(var(--dynamic-spacing) / 2.5) 0rem 0rem var(--teal-alpha);
+	--tan-color-box-shadow: calc(var(--dynamic-spacing) / 2.5) calc(var(--dynamic-spacing) / 2.5) 0rem 0rem var(--tan-alpha);
+	--two-color-box-shadow: calc(var(--dynamic-spacing) / 2.5) calc(var(--dynamic-spacing) / 2.5) 0rem 0rem var(--magenta-alpha), calc(var(--dynamic-spacing) / 2.5 * -1) calc(var(--dynamic-spacing) / 2.5 * -1) 0rem 0rem var(--teal-alpha);
+	--transition-ease: .3s ease-in;
+	--grid-fit: auto-fit;
+	--main-content: min(1700px, 90%);
+	/*splash max-width*/
+}
+
+@media (prefers-contrast: more) {
+	:root {
+		--teal: #1bc7be;
+	}
+}
+
+main {
+	--main-content: min(1500px, 90%);
+	/*main max-width*/
+}
+
+@media (min-width: 800px) {
+	:root {
+		--dynamic-spacing: 3rem;
+	}
+}
+
+
+/*
+	Grid System Variables Defines
+*/
+
+@container grid (min-width: 1000px) {
+	.grid-span-2 {
+		--grid-auto-span: 1 / span 2
+	}
+
+
+	.grid-span-1:has(~ .grid-span-1),
+	.grid-span-1 ~ .grid-span-1,
+	.grid-span-2 ~ .grid-span-1 {
+		--grid-auto-span: auto
+	}
+}
+
+@container grid (min-width: 1200px) {
+	:root {
+		--grid-auto-min: 300px;
+	}
+
+}
+
+@container grid (min-width: 1600px) {
+	:root {
+		--grid-auto-min: 400px;
+	}
+}
