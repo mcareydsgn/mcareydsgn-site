@@ -1,0 +1,404 @@
+---
+import Home from "../layouts/Home.astro";
+// import Icons from "../components/icons.svelte";
+import Icons from "../components/Icons.astro";
+import Card from "../components/Card.astro";
+---
+
+<Home title="Matthew Carey | Front End Developer">
+	<main class="full grid-page">
+		<section class="grid grid-column-auto">
+			<Card
+				boxShadowColor="tan"
+				classList="about multi-column grid-span-2"
+			>
+				<h3 class="mb-0">Hi, Nice To Meet You!</h3>
+				<p>
+					<small class="mt-0">
+						The greeting was in first person but the rest in third
+						person.
+						<span aria-label="shrug emoji"> \_(ツ)_/ </span>
+					</small>
+				</p>
+
+				<p class="mt-0">
+					Matthew Carey is a self-starting front-end web developer who
+					specializes in intuitive user interfaces (UI) for web
+					applications. His ability to do the heavy lifting of modern
+					web development and design UI from a user perspective, sets
+					him apart from other developers and designers. Over the past
+					5 years he has contributed to AdRocket<sup>&trade;</sup>
+					app, WebFronts<sup>&reg;</sup> eCommerce platform, and a wealth
+					of internal applications.
+				</p>
+				<h4 class="break-after-avoid-column">A Brief History</h4>
+				<p>
+					In 2007 Matt received his Bachelor's Arts in Multimedia from
+					University of Advancing Technology with a focus on graphic
+					design. He worked as a graphic designer for 4 years,
+					creating both digital and print ads, logos, window wraps,
+					and billboards for car dealerships.
+				</p>
+				<p>
+					In 2016 he pivoted to web development and focused on the
+					core technologies: HTML, CSS, and JavaScript. He was hired
+					at Retailer Web Services in 2017 and has received two
+					promotions and has advanced to Front End Developer II.
+				</p>
+				<hr />
+				<p>
+					For those who like bullet points.
+					<a href="#tldr">Technical Accomplishments (TLDR)</a>
+				</p>
+			</Card>
+			<Card
+				boxShadowColor="dual"
+				classList="align-self-center grid-span-1"
+			>
+				<h3>Favorite Technologies & Tools:</h3>
+				<ul class="favorite-tech list-style-none">
+					<li>
+						<Icons
+							name="javascript"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="html"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="css"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="vue"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="vite"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="vs-code"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="illustrator"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="figma"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+					<li>
+						<Icons
+							name="chart-js"
+							iconLibraryName="brands"
+							showIconName
+						/>
+					</li>
+				</ul>
+				<p class="small-title">Professional Experience With:</p>
+				<ul class="other-tech list-style-none">
+					<li>Alpine JS,</li>
+					<li>Apache ECharts,</li>
+					<li>CSS,</li>
+					<li>Eclipse,</li>
+					<li>Figma,</li>
+					<li>GA4</li>
+					<li>Git,</li>
+					<li>GTM,</li>
+					<li>Cypress,</li>
+					<li>HTML,</li>
+					<li>Illustrator,</li>
+					<li>IntelliJ,</li>
+					<li>JavaScript,</li>
+					<li>Jest,</li>
+					<li>Photoshop,</li>
+					<li>RegEx,</li>
+					<li>SCSS,</li>
+					<li>SourceTree,</li>
+					<li>Svelte,</li>
+					<li>Vite,</li>
+					<li>Vue,</li>
+					<li>Vue Styleguidist,</li>
+					<li>Vuex,</li>
+					<li>Webpack,</li>
+					<li>XD,</li>
+				</ul>
+			</Card>
+		</section>
+		<section class="full grid-page section-style-1 px-dynamic">
+			<h3 class="mb-0">Professional Contributions</h3>
+			<div class="flex-row-container">
+				<Card boxShadowColor="blue" classList="contribution-card">
+					<h4>AdRocket <sup>&trade;</sup></h4>
+					<p>
+						AdRocket<sup>&trade;</sup>, an application that allows
+						large scale management of Google and Facebook
+						advertising campaigns, generating reports with
+						interactive charts, and a whole wealth of other
+						features.
+					</p>
+					<p>
+						As part of the development team I was responsible for
+						creating interactive mock-ups with Figma, implementing
+						the new UI with Vue and Vuex, creating custom Vue
+						components, documentation and unit testing.
+					</p>
+					<ul>
+						<li>
+							<a
+								href="https://www.retailerwebservices.com/adrocket.html"
+								rel="nofollow"
+								target="_blank"
+							>
+								Learn About AdRocket
+							</a>
+						</li>
+					</ul>
+				</Card>
+				<Card boxShadowColor="blue" classList="contribution-card">
+					<h4>WebFronts <sup>&reg;</sup></h4>
+					<p>
+						WebFronts<sup>&reg;</sup> is an eCommerce platform for thousands
+						of independent retailers in the appliance and furniture industry.
+						It gives small stores the tools to compete with larger box
+						stores. The platform consists of WebFronts app (CMS), RetailDeck
+						app (Inventory and Pricing Management), FlashTags (electronic
+						shelf labels management tool), and a few smaller services.
+					</p>
+					<p>
+						While working on the platform I had to solve a wide
+						range of problems. From implementing Wells Fargo and
+						Synchrony payment/financing integration at checkout,
+						adding Google Analytics 4 and global site tags on a
+						thousand plus retailer sites, to developing a system to
+						display product and pricing information on electronic
+						shelf labels (FlashTags).
+					</p>
+					<ul>
+						<li>
+							<a
+								href="https://www.retailerwebservices.com/webfronts.html"
+								rel="nofollow"
+								target="_blank"
+							>
+								Learn About Webfronts
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.retailerwebservices.com/retaildeck.html"
+								rel="nofollow"
+								target="_blank"
+							>
+								Learn About RetailDeck
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.retailerwebservices.com/webfronts/flashtags.html"
+								rel="nofollow"
+								target="_blank"
+							>
+								Learn About FlashTags
+							</a>
+						</li>
+					</ul>
+				</Card>
+				<Card boxShadowColor="blue" classList="contribution-card">
+					<h4>Internal Applications</h4>
+					<p>
+						Retailer Web Services has a handful of internal
+						applications the staff uses. A Customer Relationship
+						Manager, a digital promotions management software called
+						Mingle, Promo Central, and Banter Buddy.
+					</p>
+					<p>
+						Many of these internal applications were fully developed
+						by the time I joined the development team. So a large
+						part of my role was developing some new features,
+						maintenance, and bug fixes.
+					</p>
+					<p>
+						Promo Central is a development environment that I
+						architected. In allows the promotions team to develop
+						promotional landing pages for two very different web
+						platforms. WebFronts SSR Java, and OneShop Next.js. It
+						utilizes custom HTML web components, Vanilla JS, and
+						CSS, no libraries.
+					</p>
+				</Card>
+			</div>
+			<!-- <h3>Personal Projects</h3> -->
+		</section>
+		<section class="tldr flex-row-container" id="tldr">
+			<div>
+				<h3>Technical Accomplishments (TLDR)</h3>
+				<ul>
+					<li>
+						AdRocket<sup>&trade;</sup>:
+						<ul>
+							<li>
+								UI design and development direction of the app.
+							</li>
+							<li>
+								Vue component paradigm and state management of
+								AdRocket App.
+							</li>
+							<li>
+								Utilized Vue Styleguidist to create auto
+								generated Front-End documentation.
+							</li>
+							<li>
+								Architected a Vue 3 component library to replace
+								the Bootstrap Vue.
+							</li>
+							<li>
+								Utilized GitHub actions to create and publish a
+								private GitHub package.
+							</li>
+							<li>
+								Implemented a UX/UI Survey for users to provide
+								feedback for new workflows and features.
+							</li>
+						</ul>
+					</li>
+					<li>
+						WebFronts<sup>&reg;</sup>:
+						<ul>
+							<li>
+								Deployed Global Site Tag (GA4, AdWords, UA)
+								implementation to 1,000 plus retailer sites.
+							</li>
+							<li>
+								Two years later, reworked Google and Facebook
+								Analytics to use GTM utilizing event delegation.
+							</li>
+							<li>
+								Added Wells Fargo and Synchrony payment &
+								financing options.
+							</li>
+						</ul>
+					</li>
+					<li>
+						FlashTags:
+						<ul>
+							<li>Designed the FlashTags logo</li>
+							<li>
+								Collaborated with another front end developer to
+								design and build an interface to manage
+								electrionic shelf labels.
+							</li>
+							<li>
+								Developed a way to convert dynamic HTML tag
+								Indexs, into a Base64 encoded PNG that would be
+								transmitted to the physical tag.
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- <Card boxShadowColor="dual" classList="learn-more-cta" id="contact">
+				<h3 class="mb-0">Want More Insights?</h3>
+				<h4>Lets Connect</h4>
+				<div
+					class="frc-captcha"
+					data-sitekey="FCMT5LTEV7E0EHES"
+					data-start="auto"
+				>
+				</div>
+			</Card> -->
+		</section>
+	</main>
+</Home>
+<style is:global>
+	@import "../styles/core.css";
+
+	@layer main {
+		.about {
+			background-color: var(--teal-alpha) !important;
+
+			& h3,
+			& p:first-of-type,
+			& hr,
+			& p:last-of-type {
+				column-span: all;
+			}
+		}
+
+		@media (min-width: 1000px) {
+			.about {
+				max-width: 1000px;
+				padding: 2rem;
+			}
+		}
+
+		.favorite-tech,
+		.other-tech {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0 0.5rem;
+		}
+
+		.favorite-tech {
+			gap: 1rem;
+		}
+
+		.small-title,
+		.other-tech {
+			font-size: var(--font-size-small);
+		}
+		.small-title {
+			font-weight: 700;
+		}
+
+		.contribution-card {
+			flex-basis: 21rem;
+			flex-grow: 1;
+		}
+
+		.tldr.flex-row-container {
+			justify-content: center;
+
+			& div:not(.card) {
+				flex-basis: 500px;
+				flex-grow: 1;
+			}
+
+			& div.card {
+				align-self: start;
+			}
+		}
+
+		.frc-captcha {
+			position: relative;
+			height: 40px !important;
+			width: 300px !important;
+		}
+	}
+</style>

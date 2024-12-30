@@ -1,0 +1,12 @@
+---
+const {
+	tagname = "div",
+	classList = "",
+	boxShadowColor = "blue",
+} = Astro.props;
+const Element = tagname;
+---
+
+<Element class:list={["card", boxShadowColor, ...classList.split(" ")]}>
+	<slot />
+</Element>

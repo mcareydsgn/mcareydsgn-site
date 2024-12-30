@@ -1,0 +1,117 @@
+ar-slider {
+	&:not(.init) {
+		display: grid;
+		grid-gap: var(--dynamic-spacing);
+		grid-auto-flow: dense;
+		grid-template-columns: repeat(var(--grid-fit), minmax(350px, 1fr));
+	}
+
+	&.init {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		& > .stage {
+			display: flex;
+			flex-wrap: nowrap;
+			overflow: hidden;
+
+			z-index: 1;
+
+			& ar-panel {
+				width: 100%;
+				flex-shrink: 0;
+				align-self: start;
+
+				&:focus {
+					outline: auto;
+				}
+			}
+		}
+
+		& .arrow-controls {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+
+			& [class$="-arrow"] {
+				cursor: pointer;
+				border: none;
+				width: 40px;
+				height: 40px;
+				background-color: var(--dark-magenta);
+				mask-mode: alpha;
+				mask-repeat: no-repeat;
+				mask-position: center;
+				transition: background-color .3s ease-in-out;
+
+				&:hover,
+				&:focus-visible {
+					background-color: var(--magenta);
+				}
+
+				&:disabled {
+					opacity: .5;
+					cursor: not-allowed;
+				}
+			}
+
+			& .next-arrow {
+				mask-image: url(/icons/heroicons/arrow-right-circle.svg);
+
+			}
+
+			& .prev-arrow {
+				mask-image: url(/icons/heroicons/arrow-left-circle.svg);
+
+			}
+
+		}
+
+		& > menu {
+			display: flex;
+			position: absolute;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			bottom: 0;
+			left: 0;
+			list-style: none;
+			padding-left: 0;
+			z-index: 2;
+			gap: calc(var(--dynamic-spacing) / 3);
+
+
+			& button.nav-dots {
+				position: relative;
+				top: 60px;
+				height: 20px;
+				width: 20px;
+				background-color: var(--dark-magenta);
+				border: none;
+				border-radius: 50%;
+				margin-bottom: 20px;
+				transition: background-color .3s ease-in-out, transform .3s ease-in-out;
+				transform: scale(.8);
+				cursor: pointer;
+
+				&.active,
+				&:hover,
+				&:focus-visible {
+					background-color: var(--magenta);
+					transform: scale(1.2);
+				}
+
+
+			}
+
+			&:has(button.nav-dots:hover) .nav-dots.active {
+				transform: scale(1);
+			}
+		}
+
+	}
+}

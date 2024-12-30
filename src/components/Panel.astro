@@ -1,0 +1,9 @@
+<script>
+	import ARPanel from "../archipelago-elements/ARPanel";
+	if (customElements.get("ar-panel") === undefined) {
+		customElements.define("ar-panel", ARPanel);
+	}
+</script>
+<ar-panel>
+	<slot />
+</ar-panel>

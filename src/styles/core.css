@@ -1,0 +1,28 @@
+@import 'reset.css' layer(reset);
+@import 'components.css' layer(main);
+@import "utility.css" layer(utility);
+@import './../archipelago-elements/ARSlider.css' layer(main);
+
+
+@layer main {
+
+
+	@media (min-width:600px) {
+		body.grid-page > header {
+			margin-bottom: calc(-1*(var(--dynamic-spacing)));
+		}
+	}
+
+
+	footer {
+		background-color: var(--tan);
+		color: #635729;
+		padding: 1rem;
+		text-align: center;
+	}
+
+	footer p {
+		max-width: 75vw;
+		margin: 0 auto;
+	}
+}

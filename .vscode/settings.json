@@ -1,0 +1,26 @@
+{
+	"editior.renderWhitespace": "all",
+	"editor.bracketPairColorization.enabled": true,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.autoIndent": "full",
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"editor.wordWrapColumn": 480,
+	"editor.formatOnSave": true,
+	"html.format.wrapAttributes": "aligned-multiple",
+	"html.format.indentInnerHtml": true,
+	"javascript.updateImportsOnFileMove.enabled": "prompt",
+	"diffEditor.ignoreTrimWhitespace": true,
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg",
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"emmet.includeLanguages": {
+		"javascript": "html"
+	}
+}
