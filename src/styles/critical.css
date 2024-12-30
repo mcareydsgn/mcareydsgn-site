@@ -108,7 +108,7 @@ a {
 			z-index: 2;
 
 			& .front-end-title {
-				font-size: 0.4em;
+				font-size: 0.3em;
 			}
 		}
 	}
@@ -162,7 +162,7 @@ a {
 		align-self: start;
 		position: absolute;
 		border-radius: 2rem;
-		mask-image: url(/public/Untitled.svg);
+		mask-image: url(/BrushStrokeMask.svg);
 		mask-repeat: no-repeat;
 		mask-size: cover;
 		mask-position: center;
@@ -266,7 +266,7 @@ a {
 			justify-self: stretch;
 			align-self: start;
 			font-size: 1.5em;
-			font-weight: 300;
+			font-weight: 700;
 			line-height: 0.8;
 
 			& .designer {
@@ -316,7 +316,7 @@ a {
 			justify-self: stretch;
 			align-items: center;
 			font-size: 1.5em;
-			font-weight: 300;
+			font-weight: 700;
 			line-height: 0.8;
 
 			display: inline-flex;
@@ -353,15 +353,16 @@ a {
 				1.46vw 2.56vw 0 var(--teal),
 				2.56vw 5vw 0 var(--warm-white),
 				2.93vw 5.49vw 0 var(--teal);
-			transform: translateY(14.5vw) translateX(22vw) rotate(-67deg);
+			transform: translateY(14.5vw) translateX(16vw) rotate(-67deg);
+			/* transform: translateY(14.5vw) translateX(22vw) rotate(-67deg); */
 		}
 
-		&:has(.blog-name) {
+		/* &:has(.blog-name) {
 			& #rectSolid {
 
-				transform: translateY(10.5vw) translateX(22vw) rotate(-67deg);
+				transform: translateY(10.5vw) translateX(16vw) rotate(-67deg);
 			}
-		}
+		} */
 
 		& .mobile-white-inline {
 			background-color: transparent;
@@ -391,19 +392,14 @@ a {
 		& #rectSolid {
 			width: 764px;
 			height: 1273px;
-			transform: matrix(0.390731, -0.920505, 0.920505, 0.390731, 373.824, 246.384)
+			transform: matrix(0.390731, -0.920505, 0.920505, 0.390731, 271.36, 245.92);
 		}
 
 		&:has(.blog-name) {
 			& #rectSolid {
 				width: 764px;
 				height: 1273px;
-				transform: matrix(0.390731,
-						-0.920505,
-						0.920505,
-						0.390731,
-						373.12,
-						101.76);
+				transform: matrix(0.390731, -0.920505, 0.920505, 0.390731, 271.36, 245.92);
 			}
 		}
 	}

@@ -5,9 +5,9 @@ const { classList = "", hasArrows = false, hasNavDots = false } = Astro.props;
 <script>
 	import ARSlider from "../archipelago-elements/ARSlider";
 
-	customElements.define("ar-slider", ARSlider);
-	// if (customElements.get("ce-slider") === undefined) {
-	// }
+	if (customElements.get("ar-slider") === undefined) {
+		customElements.define("ar-slider", ARSlider);
+	}
 </script>
 <ar-slider
 	has-arrows={hasArrows}

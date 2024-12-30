@@ -134,7 +134,7 @@
 		height: 100%;
 		background-color: var(--tan);
 		z-index: -1;
-		mask-image: url(/public/Section-Style-1-BG.svg);
+		mask-image: url(/Section-Style-1-BG.svg);
 		mask-repeat: no-repeat;
 		mask-size: cover;
 		mask-position: center;

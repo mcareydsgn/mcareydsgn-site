@@ -112,8 +112,12 @@ export default class ARSlider extends HTMLElement {
 
 	initArrowButtons() {
 		this.arrows = document.createElement('div')
+		this.arrows.classList.add('arrow-controls')
 		this.nextButton = document.createElement('button');
 		this.prevButton = document.createElement('button');
+
+		this.nextButton.classList.add('next-arrow');
+		this.prevButton.classList.add('prev-arrow');
 
 		this.nextButton.addEventListener('click', () => { return this.nextSlide() });
 		this.prevButton.addEventListener('click', () => { return this.previousSlide() });
@@ -147,6 +151,7 @@ export default class ARSlider extends HTMLElement {
 
 			button.dataset.panelId = panel.id;
 			button.role = 'tab'
+			button.classList.add('nav-dots')
 			button.setAttribute('id', `tab-${panel.id.replaceAll('panel-', '')}`);
 			button.addEventListener('click', ({ currentTarget }) => { return this.toSlide(currentTarget.dataset.panelId) });
 			if (index === 0) {

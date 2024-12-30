@@ -12,9 +12,7 @@
 	"dependencies": {
 		"@astrojs/check": "^0.5.10",
 		"@astrojs/svelte": "^5.2.0",
-		"@friendlycaptcha/sdk": "^0.1.14",
 		"astro": "^4.5.9",
-		"svelte": "^4.2.12",
 		"typescript": "^5.4.3"
 	}
 }

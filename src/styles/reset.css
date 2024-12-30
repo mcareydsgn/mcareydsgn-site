@@ -24,6 +24,11 @@ nav {
 	margin-bottom: calc(-1 * (var(--dynamic-spacing) + 5));
 }
 
+a {
+	padding: calc(1rem / 2);
+	display: inline-block;
+}
+
 
 h1,
 h2:not(.sub-title),

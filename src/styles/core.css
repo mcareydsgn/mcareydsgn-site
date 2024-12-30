@@ -3,13 +3,6 @@
 @import "utility.css" layer(utility);
 @import './../archipelago-elements/ARSlider.css' layer(main);
 
-*:focus {
-	border: 5px solid red !important;
-}
-
-ar-slider:focus-within {
-	border: 1px solid green !important;
-}
 
 @layer main {
 
