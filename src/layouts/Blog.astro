@@ -1,8 +1,10 @@
 ---
-const { title } = Astro.props;
+const { seoInfo } = Astro.props;
+import HeadTags from "../components/HeadTags.astro";
+import SEOMetaTags from "../components/SEOMetaTags.astro";
 import Splash from "../components/Splash.astro";
 import Footer from "../components/Footer.astro";
-import Icons from "../components/Icons.astro";
+
 import Nav from "../components/SiteNav.astro";
 import { getImage } from "astro:assets";
 
@@ -28,38 +30,11 @@ const HeadshotSM = await getImage({
 <!doctype html>
 <html lang="en">
 	<head>
-		<style>
-			@font-face {
-				font-family: "Nunito Sans";
-				src: url("/fonts/NunitoSans_Black.ttf") format("truetype");
-				font-weight: 900;
-				font-display: "swap";
-			}
-
-			@font-face {
-				font-family: "Nunito Sans";
-				src: url("/fonts/NunitoSans_Regular.ttf") format("truetype");
-				font-weight: 400;
-				font-display: "swap";
-			}
-
-			@font-face {
-				font-family: "Ostrich Sans";
-				src: url("/fonts/ostrich-sans-regular.woff2");
-				font-weight: normal;
-				font-style: normal;
-				font-display: "swap";
-			}
-		</style>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<HeadTags />
+		<SEOMetaTags {...seoInfo} />
 	</head>
 	<body class="grid-page">
-		<Splash>
+		<Splash classList="blog">
 			<picture class="headshot">
 				<source
 					type="image/webp"
@@ -84,12 +59,15 @@ const HeadshotSM = await getImage({
 					<span class="mobile-white-inline">Chinwag</span>
 				</span>
 			</h1>
-			<h2 class="blog-title">
-				<Icons name="article-outline" iconLibraryName="heroicons" />
-				<span>
-					<slot name="title" />
-				</span>
-			</h2>
+			<div class="blog-title-container">
+				<h2 class="blog-title">
+					<slot name="icon" />
+					<span>
+						<slot name="title" />
+					</span>
+				</h2>
+				<p class="published-date"><slot name="published-date" /></p>
+			</div>
 
 			<div id="rectSolid"></div>
 		</Splash>

@@ -4,6 +4,7 @@
 
 
 
+
 .grid {
 	display: grid;
 	grid-gap: calc(var(--dynamic-spacing) * 1.5);
@@ -11,6 +12,14 @@
 	grid-template-columns: repeat(var(--grid-fit), minmax(48px, 1fr));
 	container-type: inline-size;
 	container-name: grid;
+
+}
+
+ol.grid,
+ul.grid {
+	& li {
+		display: contents;
+	}
 }
 
 
