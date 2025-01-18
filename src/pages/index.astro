@@ -1,11 +1,20 @@
 ---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {}
+
 import Home from "../layouts/Home.astro";
-// import Icons from "../components/icons.svelte";
 import Icons from "../components/Icons.astro";
 import Card from "../components/Card.astro";
+
+const seoInfo = {
+	title: "Matthew Carey | Front End Developer",
+	description:
+		"Portfolio and blog by Matthew Carey. Learn JS, HTML, CSS, and software development insights from an experienced Front End Developer.",
+};
 ---
 
-<Home title="Matthew Carey | Front End Developer">
+<Home seoInfo={seoInfo}>
 	<main class="full grid-page">
 		<section class="grid grid-column-auto">
 			<Card
@@ -48,7 +57,7 @@ import Card from "../components/Card.astro";
 				<hr />
 				<p>
 					For those who like bullet points.
-					<a href="#tldr">Technical Accomplishments (TLDR)</a>
+					<a href="#tldr">Major Accomplishments (TLDR)</a>
 				</p>
 			</Card>
 			<Card
@@ -258,7 +267,7 @@ import Card from "../components/Card.astro";
 		</section>
 		<section class="tldr flex-row-container" id="tldr">
 			<div>
-				<h3>Technical Accomplishments (TLDR)</h3>
+				<h3>Major Accomplishments (TLDR)</h3>
 				<ul>
 					<li>
 						AdRocket<sup>&trade;</sup>:
@@ -289,6 +298,23 @@ import Card from "../components/Card.astro";
 						</ul>
 					</li>
 					<li>
+						Promo Central
+						<ul>
+							<li>
+								Architected an HTML Web Components and CSS
+								library for Promo Central application used as a
+								tool to develop promotional landing pages that
+								could work in both a Java SSR eCommerce and a
+								Next.js eCommerce platform.
+							</li>
+							<li>
+								Implemented a custom build script with NodeJS
+								and Vite to auto-generate a documentation site
+								based on JSDoc comments.
+							</li>
+						</ul>
+					</li>
+					<li>
 						WebFronts<sup>&reg;</sup>:
 						<ul>
 							<li>
@@ -296,12 +322,14 @@ import Card from "../components/Card.astro";
 								implementation to 1,000 plus retailer sites.
 							</li>
 							<li>
-								Two years later, reworked Google and Facebook
-								Analytics to use GTM utilizing event delegation.
+								Created a GTM container template and JavaScript
+								implementation guidelines to track GA4, and
+								Google Ad conversion per AdRocket requirements.
 							</li>
 							<li>
-								Added Wells Fargo and Synchrony payment &
-								financing options.
+								Added Wells Fargo, PayPal, and Synchrony
+								payment/financing options to the WebFronts
+								eCommerce platform.
 							</li>
 						</ul>
 					</li>
@@ -311,13 +339,14 @@ import Card from "../components/Card.astro";
 							<li>Designed the FlashTags logo</li>
 							<li>
 								Collaborated with another front end developer to
-								design and build an interface to manage
-								electrionic shelf labels.
+								design and build an an application to manage a
+								retailer's set of ESLs and propagate them to the
+								physical devices
 							</li>
 							<li>
-								Developed a way to convert dynamic HTML tag
-								Indexs, into a Base64 encoded PNG that would be
-								transmitted to the physical tag.
+								Developed a way to generate electronic shelf
+								labels (ESL) with HTML canvas for product and
+								pricing info.
 							</li>
 						</ul>
 					</li>

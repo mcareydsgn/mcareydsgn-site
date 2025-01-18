@@ -1,0 +1,92 @@
+---
+import Blog from "../../layouts/Blog.astro";
+import MultiColumn from "../../components/MultiColumn.astro";
+
+const seoInfo = {
+	title: "Matthew Carey | How User Feedback Can Improve Team Silos",
+	description:
+		"Breaking down silos at companies is a real challenge. This is a story of how using UX surveys can open the channels between teams and make for a better application.",
+};
+---
+
+<Blog seoInfo={seoInfo}>
+	<Fragment slot="title"> How User Feedback Can Improve Team Silos</Fragment>
+	<Fragment slot="published-date">January 16th, 2025</Fragment>
+	<article class="full grid-page">
+		<MultiColumn columnCount="2" classList="section-style-1 card magenta">
+			<h3>It Is How It Is</h3>
+			<p>
+				I have always thought of my role as a front-end developer as a
+				support role. The applications I have developed were used
+				internally by staff and clients. If our users encountered
+				friction that caused disruption then it was my responsibility to
+				address it. I found that the majority of people just accept the
+				software issues as reality and continue to be frustrated.
+			</p>
+			<p>
+				I had a new coworker tell me about an issue with losing input
+				values when a modal closed by accidentally clicking the
+				backdrop. This happened frequently but their team had put up
+				with it for years. Fortunately, it was a simple fix and I was
+				able to add prop to the component and it would disabled the
+				"feature". Within an hour, the fix was completed and ready for
+				deployment. Pain point eliminated.
+			</p>
+			<h3>So Why The Suffering and How Can We Stop It?</h3>
+			<p>
+				Oftentimes people are too busy and unaware of how difficult the
+				issue is to fix or if it is fixable, other tasks are just a
+				higher priority, or worse there is no process and things don't
+				get fixed in a timely manner when asked. We can fix this
+				mentality by creating opportunities for feedback and demonstrate
+				that they are heard by following through with changes.
+			</p>
+			<ul>
+				<li>
+					Whenever a new feature or workflow is released, follow up by
+					sending out a short survey for feedback.
+				</li>
+				<li>
+					Check in after a couple of months on how the feature or
+					workflow has panned out. This can be another short survey or
+					questionnaire.
+				</li>
+				<li>
+					Ask a coworker/user about what they are working on and how
+					they do it. Pay attention to how they talk about the app.
+				</li>
+			</ul>
+			<h3>Creating a Process</h3>
+			<p>
+				If you want anything to stick you must create a good process
+				that makes it easy for others to adapt and apply to their needs.
+			</p>
+			<ul>
+				<li>
+					Create documentation that covers the dos and don'ts of
+					creating UX/UI surveys.
+				</li>
+				<li>
+					Google Form templates with standard questions to set a
+					common baseline.
+				</li>
+				<li>
+					Use automation to create a follow up story when a new page,
+					feature, or change to a workflow was deployed.
+				</li>
+			</ul>
+			<h3>Reception</h3>
+			<p>
+				The response was amazing, it created a new way for our users to
+				express issues, bugs, or features that would improve their
+				workflow. The best part was that once they saw that the
+				development team actually fixed or released a requested feature
+				they became more invested and were more open to asking for
+				improvements.
+			</p>
+		</MultiColumn>
+	</article>
+	<style is:global>
+		@import "./../../styles/core.css";
+	</style>
+</Blog>

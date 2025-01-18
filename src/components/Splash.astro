@@ -1,4 +1,8 @@
-<header class="splash">
+---
+const { classList = "" } = Astro.props;
+---
+
+<header class="splash" class:list={[...classList.split(" ")]}>
 	<slot />
 </header>
 

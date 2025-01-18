@@ -1,21 +1,50 @@
 ---
 import Blog from "../../layouts/Blog.astro";
 import Card from "../../components/Card.astro";
+import Icons from "../../components/Icons.astro";
+
+const seoInfo = {
+	title: "Matthew Carey | Front End Developer",
+	description:
+		"Portfolio and blog by Matthew Carey. Learn JS, HTML, CSS, and software development insights from an experienced Front End Developer.",
+};
 ---
 
-<Blog title="Matthew Carey | A Bit of A Chinwag : Latest Articles">
-	<Fragment slot="title">Latest Articles</Fragment>
+<Blog seoInfo={seoInfo}>
+	<Fragment slot="icon">
+		<Icons name="article-outline" iconLibraryName="heroicons" />
+	</Fragment>
+	<Fragment slot="title"> Latest Articles </Fragment>
 	<ol class="grid grid-column-350">
 		<li>
 			<Card tagname="article" boxShadowColor="dual">
-				<h3>Telling A Story With Reports</h3>
+				<h3>How User Feedback Can Improve Team Silos</h3>
+				<p>January 16th, 2025</p>
 				<p>
-					Marketing campaigns with Google and Facebook come with a
-					large footprint of data. There are many types of metrics
-					that go into a performance report, such as spend, clicks,
-					impressions, reach, and a whole suite of site and ad
-					conversions. It is a challenging problem to solve both
-					technically and visually.
+					Breaking down silos at companies is a real challenge,
+					especially between software developers and the rest of the
+					company. This is a story of how using UX surveys can open
+					the channels between teams and make for a better
+					application.
+				</p>
+				<a
+					href="/chinwag-blog/how-user-feedback-can-improve-team-silos"
+				>
+					Read More
+				</a>
+			</Card>
+		</li>
+		<li>
+			<Card tagname="article" boxShadowColor="dual">
+				<h3>Telling A Story With Reports</h3>
+				<p>December 20th, 2024</p>
+				<p>
+					Designing and Developing User Interfaces (UI) to show
+					analytics data without overwhelming the user gets
+					complicated. Especially when you have to cater to different
+					types of users. A successful report communicates data users
+					care about, goes in-depth where needed, and shows the value
+					of your service.
 				</p>
 				<a href="/chinwag-blog/telling-a-story-with-reports">
 					Read More
