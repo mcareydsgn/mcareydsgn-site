@@ -166,8 +166,8 @@ const seoInfo = {
 				<Card boxShadowColor="blue" classList="contribution-card">
 					<h4>AdRocket <sup>&trade;</sup></h4>
 					<p>
-						AdRocket<sup>&trade;</sup>,is an application that allows
-						large-scale management of Google and Facebook
+						AdRocket<sup>&trade;</sup>, is an application that
+						allows large-scale management of Google and Facebook
 						advertising campaigns, reporting capability with
 						interactive charts, and a wealth of other features.
 					</p>
@@ -361,6 +361,60 @@ const seoInfo = {
 	@import "../styles/core.css";
 
 	@layer main {
+		.one-thing {
+			--transition-ease: 200ms;
+			display: flex;
+			justify-self: center;
+			width: fit-content;
+			background-color: var(--tan-alpha);
+			color: var(--magenta);
+			font-size: clamp(1.75rem, 2vw, 2.5rem);
+			font-weight: 900;
+			font-family: Barlow, Helvetica, sans-serif;
+			text-box-trim: trim-both;
+			text-decoration: none;
+			transition:
+				transform var(--transition-ease),
+				box-shadow var(--transition-ease);
+
+			transition-delay: 100ms;
+			padding: 0.5rem;
+			padding-left: 2rem;
+			z-index: 2;
+			margin-bottom: 1rem;
+			&:active,
+			&:focus,
+			&:hover {
+				box-shadow: 0.25rem 0.25rem 0 0 var(--magenta-alpha);
+				transform: translate(0.5rem, 0.5rem);
+			}
+
+			& .icon-container {
+				display: inline-flex;
+				flex-direction: column;
+				text-align: center;
+				align-items: center;
+				text-transform: capitalize;
+				position: relative;
+				/* top: 0; */
+				color: var(--teal);
+				width: 50%;
+				order: 2;
+
+				& svg {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+
+			@media (min-width: 600px) {
+				position: sticky;
+				position: sticky;
+				bottom: 4rem;
+				margin-bottom: unset;
+				justify-self: start;
+			}
+		}
 		.about {
 			background-color: var(--teal-alpha) !important;
 

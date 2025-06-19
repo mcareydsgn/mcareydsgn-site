@@ -1,0 +1,20 @@
+---
+import Portfolio from "../layouts/Portfolio.astro";
+
+const seoInfo = {
+	title: "Matthew Carey | Portfolio Showcase",
+	description:
+		"Designing & Developing UI to show analytics data without overwhelming the user gets complicated. Especially when you have to cater to different types of users.",
+};
+---
+
+<Portfolio seoInfo={seoInfo}>
+	<Fragment slot="title">AdRocket Application </Fragment>
+	<Fragment slot="published-date"
+		>Fellow Contributors: Avery Gonzales, Preston McCumber, Andrew Towe
+	</Fragment>
+	<article class="full grid-page">test</article>
+</Portfolio>
+<style is:global>
+	@import "./../styles/core.css";
+</style>
