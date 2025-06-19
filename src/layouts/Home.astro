@@ -5,6 +5,7 @@ import SEOMetaTags from "../components/SEOMetaTags.astro";
 import Splash from "../components/Splash.astro";
 import Nav from "../components/SiteNav.astro";
 import Footer from "../components/Footer.astro";
+import Icons from "../components/Icons.astro";
 import { getImage } from "astro:assets";
 
 import headshot from "../assets/images/headshot.png";
@@ -63,8 +64,8 @@ const HeadshotSM = await getImage({
 			</picture>
 
 			<h1 class="home-page-title">
-				<span class="mobile-white-inline">Matthew</span>
-				<span class="mobile-white-inline">Carey</span>
+				<span class="inline-text-background">Matthew</span>
+				<span class="inline-text-background">Carey</span>
 			</h1>
 			<h2 class="sub-title">
 				<span class="designer">A Creative<br />Designer</span>
@@ -79,15 +80,21 @@ const HeadshotSM = await getImage({
 					/>
 				</span>
 				<span class="developer">
-					<span class="front-end-title mobile-white-inline">
+					<span class="front-end-title inline-text-background">
 						Front- End
 					</span>
-					<span class="mobile-white-inline">Web</span>
-					<span class="mobile-white-inline">Developer</span>
+					<span class="inline-text-background">Web</span>
+					<span class="inline-text-background">Developer</span>
 				</span>
 			</h2>
 			<div id="rectSolid"></div>
 		</Splash>
+
+		<!-- <a href="/ad-rocket-app" class="card magenta one-thing">
+			<Icons name="sparkles" iconLibraryName="heroicons" />
+			<span>Only have time to checkout one thing?</span>
+		</a> -->
+
 		<Nav class:list={[" full"]} />
 		<slot />
 		<Footer />

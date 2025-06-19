@@ -14,9 +14,9 @@ nav {
 	& ul {
 		list-style: none;
 		display: flex;
-		gap: 1rem;
+		gap: clamp(.25rem, 1vw, 1rem);
 		justify-content: end;
-		padding: 1rem;
+		padding: clamp(.25rem, 1vw, 1rem);
 		margin: 0;
 	}
 
