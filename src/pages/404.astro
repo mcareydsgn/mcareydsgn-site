@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {}
+
+import HeadTags from "../components/HeadTags.astro";
+import SEOMetaTags from "../components/SEOMetaTags.astro";
+
+const seoInfo = {
+	title: "Matthew Carey | Missing Page",
+	description: "The page you are looking for cannot be found.",
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<html lang="en">
+		<head>
+			<HeadTags />
+			<SEOMetaTags {...seoInfo} />
+		</head>
+		<body>
+			<main>
+				<header>
+					<h1>Page Not Found</h1>
+					<a href="/">Return Home</a>
+				</header>
+			</main>
+		</body>
+	</html>
+</html>

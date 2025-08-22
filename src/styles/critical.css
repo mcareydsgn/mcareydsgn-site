@@ -25,7 +25,7 @@ a {
 
 .splash {
 	--inline-text-bg-color: var(--warm-white-alpha);
-	--inline-text-padding: 0 .5rem .7rem .5rem;
+	--inline-text-padding: 0 .5rem 0 .5rem;
 	display: grid;
 	gap: var(--dynamic-spacing);
 	grid-template-columns: repeat(2, 1fr);
@@ -128,7 +128,7 @@ a {
 			}
 
 			& .front-end-title {
-				--inline-text-padding: 0 .5rem .3rem .5rem;
+				--inline-text-padding: 0 .5rem 0 .5rem;
 				font-size: 0.3em;
 				padding: var(--inline-text-padding);
 			}

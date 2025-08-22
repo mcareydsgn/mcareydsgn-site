@@ -1,5 +1,5 @@
 {
-	"name": "mcareydsgn-astro-lit",
+	"name": "mcareydsgn-astro",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -13,5 +13,8 @@
 		"@astrojs/check": "^0.5.10",
 		"astro": "^4.5.9",
 		"typescript": "^5.4.3"
+	},
+	"devDependencies": {
+		"wrangler": "^4.32.0"
 	}
 }
