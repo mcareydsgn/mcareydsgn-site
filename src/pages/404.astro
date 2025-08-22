@@ -4,7 +4,29 @@ import type { HTMLAttributes } from "astro/types";
 interface Props extends HTMLAttributes<"a"> {}
 
 import HeadTags from "../components/HeadTags.astro";
+import Nav from "../components/SiteNav.astro";
 import SEOMetaTags from "../components/SEOMetaTags.astro";
+import Splash from "../components/Splash.astro";
+import Footer from "../components/Footer.astro";
+import Icons from "../components/Icons.astro";
+import headshot from "../assets/images/headshot.png";
+import { getImage } from "astro:assets";
+
+const HeadshotLg = await getImage({
+	src: headshot,
+	width: 824,
+	format: "webp",
+});
+const HeadshotMd = await getImage({
+	src: headshot,
+	width: 650,
+	format: "webp",
+});
+const HeadshotSM = await getImage({
+	src: headshot,
+	width: 375,
+	format: "webp",
+});
 
 const seoInfo = {
 	title: "Matthew Carey | Missing Page",
@@ -19,13 +41,53 @@ const seoInfo = {
 			<HeadTags />
 			<SEOMetaTags {...seoInfo} />
 		</head>
-		<body>
+		<body class="grid-page">
+			<Splash classList="blog">
+				<picture class="headshot">
+					<source
+						type="image/webp"
+						srcset={HeadshotSM.src}
+						media="(max-width: 425px)"
+						height="533"
+						width="375"
+					/>
+					<source
+						type="image/webp"
+						srcset={HeadshotMd.src}
+						media="(max-width: 1200px)"
+						height="924"
+						width="650"
+					/>
+					<img
+						src={HeadshotLg.src}
+						alt=""
+						height="1174"
+						width="824"
+					/>
+				</picture>
+
+				<h1 class="blog-name">
+					<span>
+						<span class="inline-text-background">Oh...</span>
+					</span>
+				</h1>
+				<div class="blog-title-container">
+					<h2 class="blog-title">
+						I guess I should have made a page for this.
+					</h2>
+					<p class="published-date">
+						You can find your way back right?
+					</p>
+				</div>
+				<div id="rectSolid"></div>
+			</Splash>
 			<main>
-				<header>
-					<h1>Page Not Found</h1>
-					<a href="/">Return Home</a>
-				</header>
+				<Nav class:list={[" full"]} />
 			</main>
+			<Footer />
+			<style is:global>
+				@import "../styles/core.css";
+			</style>
 		</body>
 	</html>
 </html>
