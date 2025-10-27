@@ -25,7 +25,7 @@ a {
 
 .splash {
 	--inline-text-bg-color: var(--warm-white-alpha);
-	--inline-text-padding: 0 .5rem 0 .5rem;
+	--inline-text-padding: .5rem;
 	display: grid;
 	gap: var(--dynamic-spacing);
 	grid-template-columns: repeat(2, 1fr);
@@ -66,7 +66,7 @@ a {
 		z-index: 2;
 		font-size: 2em;
 		line-height: 1;
-		bottom: calc(var(--dynamic-spacing) * 2);
+		bottom: calc(var(--dynamic-spacing) * 4);
 
 	}
 
@@ -92,7 +92,7 @@ a {
 			color: white;
 			z-index: 2;
 			position: relative;
-			bottom: calc(var(--dynamic-spacing) * 2.5);
+			bottom: calc(var(--dynamic-spacing) * 4);
 			--inline-text-bg-color: var(--magenta-alpha);
 			display: flex;
 			flex-direction: column;
@@ -128,7 +128,7 @@ a {
 			}
 
 			& .front-end-title {
-				--inline-text-padding: 0 .5rem 0 .5rem;
+				--inline-text-padding: .5rem;
 				font-size: 0.3em;
 				padding: var(--inline-text-padding);
 			}
@@ -146,7 +146,6 @@ a {
 		font-size: 1.5em;
 		line-height: 1em;
 		margin: 0;
-		--inline-text-padding: 0 .5rem 0 .5rem;
 
 		& span {
 			display: inline-flex;
@@ -231,7 +230,7 @@ a {
 		background-color: var(--inline-text-bg-color);
 		align-self: end;
 		line-height: 1;
-		padding: var(--inline-text-padding);
+		padding-inline: var(--inline-text-padding) ;
 		border-radius: .1em;
 	}
 }
@@ -337,6 +336,10 @@ a {
 				justify-self: center;
 				color: white;
 				--inline-text-bg-color: var(--magenta-alpha);
+
+                & .inline-text-background {
+                    padding-bottom: var(--inline-text-padding);
+                }
 			}
 		}
 

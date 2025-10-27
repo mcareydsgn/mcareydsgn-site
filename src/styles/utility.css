@@ -45,6 +45,10 @@ ul.grid {
 	grid-template-columns: repeat(var(--grid-fit), minmax(350px, 1fr));
 }
 
+.grid-column-half {
+    grid-template-columns: 1fr 1fr;
+}
+
 .grid-auto-fill {
 	--grid-fit: auto-fill;
 }
@@ -191,6 +195,10 @@ ul.grid {
 
 .ml-0 {
 	margin-left: 0;
+}
+
+.pl-0 {
+    padding-left: 0;
 }
 
 .pt-dynamic {

@@ -1,0 +1,91 @@
+---
+import Portfolio from "../layouts/Portfolio.astro";
+import MultiColumn from "../components/MultiColumn.astro";
+import Slider from "../components/Slider.astro";
+import Panel from "../components/Panel.astro";
+import Card from "../components/Card.astro";
+
+const seoInfo = {
+	title: "Matthew Carey | Portfolio Showcase",
+	description:
+		"",
+};
+---
+
+<Portfolio seoInfo={seoInfo}>
+	<Fragment slot="title">AdRocket Application </Fragment>
+	<Fragment slot="published-date"
+		>Fellow Contributors: Avery Gonzales, Preston McCumber, Andrew Towe
+	</Fragment>
+	<article class="full grid-page">
+        <MultiColumn columnCount="2" classList="section-style-1 card magenta">
+            <h3>Overview</h3>
+            <p>A software application for creating, managing, placing, and budgeting advertising campaigns on Google and Facebook. AdRocket is a multi-page application that utilizes Vue, Vuex, Java, AWS, and Docker. My responsibilities on this team were designing and developing the front-end application. From mockup to code delivery the front-end was my domain.</p>
+
+            <Slider hasArrows>
+                <Panel>
+                    <img src="/ar-login.png" alt="AdRocket App Login"  width="100" height="59"/>
+                </Panel>
+                <Panel>
+                    <img src="/ar-report1.png" alt="AdRocket Report Highlights"  loading="lazy" width="100" height="59"/>
+                </Panel>
+                <Panel>
+                    <img src="/ar-report2.png" alt="AdRocket Report Highlights Comparison Chart"  loading="lazy" width="100" height="59"/>
+                </Panel>
+                <Panel>
+                    <img src="/ar-report3.png" alt="AdRocket App Highlight Bubble Chart"   loading="lazy" width="100" height="59"/>
+                </Panel>
+                <Panel>
+                    <img src="/ar-report4.png" alt="AdRocket App Highlight Bubble Chart"  loading="lazy" width="100" height="59"/>
+                </Panel>
+            </Slider>
+        </MultiColumn>
+        <Card boxShadowColor="magenta" tagname="section">
+            <h3>
+               Performance Report
+            </h3>
+            <p>
+                One of the User Interfaces I am most proud of because it was an interesting challenge of state management and asynchronous nature of loading analytics data from more than one resource. The first tricky part was loading all placements by start and end dates, then offering a wide range of filters before sending out requests to retrieve the analytics data. To avoid hammering our backend, Google, and Meta for data we had to make sure the users selected all of their options. This ranged from getting only certain ad platforms, manufacture brands, date ranges, and also comparisons.
+            </p>
+            <p>
+                Once the report started to gather data we had to prioritize the requests to populate the highlights section and then other more detailed content. In many cases Google or Meta data would come at different times so as the data came it charts and tables would populate with more information. I wrote a more indepth blog article about how I approached the UI and how to communicate the wall of data in a digestible form.
+            </p>
+            <p>
+                <a class="pl-0 " href="/chinwag-blog/telling-a-story-with-reports">Read: Telling a Story With Reports</a>
+            </p>
+            <video controls width="1448" height="819">
+                <source src="https://assets.mcareydsgn.com/AR-PerformanceReport.mp4" >
+            </video>
+            <h3>
+                Managing Placements
+            </h3>
+            <p>
+                The manage placements page was the central hub for advertising campaigns on AdRocket. It allowed our digital advertising advisors to create campaigns by platform, edit spend and budgets,view placements by their states. It was also a client facing page so clients could see what was currently running and see a preview of what their ads were going to look like in the wild. The biggest challenge for this page was managing the UI state and allowing for the quick updates.
+            </p>
+            <video controls width="1448" height="819">
+                <source src="https://assets.mcareydsgn.com/AR-Manage-Placements.mp4" >
+            </video>
+            <h3>
+                Invoices
+            </h3>
+            <p>
+                Accounting wanted a way to search for invoices and save them as a PDF. Normally they would have the backend build the PDFs but since we were viewing them via a GUI, we ended up saving the HTML as a PDF. I used an NPM package html2pdf to accomplish this requirement. This allowed us to use the Vue state and populate the invoice data and style the invoice with CSS. In order to save multiple invoices at once a batch invoice feature. This allowed users to view each invoice, set a filename, and prefix each invoice filename with a unique identifier.
+            </p>
+            <video controls width="1448" height="819">
+                <source src="https://assets.mcareydsgn.com/AR-Invoices.mp4" >
+            </video>
+            <h3>
+                Customer Relationship Management
+            </h3>
+            <p>
+                The CRM Timeline gives account managers budget, ad campaign, and spend insight at a glance. They can make quick updates instead of diving into specific  ad campaigns and budgets. The notes section allows them to manage different communication touch points with the customer and find automated system updates to their campaigns.
+            </p>
+            <video controls width="1448" height="819">
+                <source src="https://assets.mcareydsgn.com/AR-CRM.mp4">
+            </video>
+        </Card>
+    </article>
+</Portfolio>
+<style is:global>
+	@import "./../styles/core.css";
+</style>
